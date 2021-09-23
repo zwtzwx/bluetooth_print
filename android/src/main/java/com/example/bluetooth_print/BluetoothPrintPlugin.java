@@ -418,6 +418,7 @@ public class BluetoothPrintPlugin implements FlutterPlugin, ActivityAware, Metho
           }
         }
       });
+      result.success(true);
     }else{
       result.error("please add config or data", "", null);
     }
