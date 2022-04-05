@@ -200,7 +200,7 @@
     
     EscCommand *command = [[EscCommand alloc]init];
     [command addInitializePrinter];
-    [command addPrintAndFeedLines:3];
+    [command addPrintAndFeedLines:1];
 
     for(NSDictionary *m in list){
         
@@ -258,7 +258,7 @@
        
     }
     
-    [command addPrintAndFeedLines:4];
+    [command addPrintAndFeedLines:3];
     return [command getCommand];
 }
 
