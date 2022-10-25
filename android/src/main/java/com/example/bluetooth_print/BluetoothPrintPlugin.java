@@ -174,7 +174,7 @@ public class BluetoothPrintPlugin implements FlutterPlugin, ActivityAware, Metho
       case "isConnected":
         result.success(threadPool != null);
         break;
-      case 'getBondedDevices':
+      case "getDevices":
       {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
 
@@ -206,7 +206,7 @@ public class BluetoothPrintPlugin implements FlutterPlugin, ActivityAware, Metho
             break;
           }
         }
-        getBondedDevices(result);
+        getDevices(result);
 
         break;
       }
