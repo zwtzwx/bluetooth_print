@@ -104,6 +104,12 @@ class BluetoothPrint {
     });
   }
 
+  Future<List<BluetoothDevice>> getBondedDevices() async {
+    final List list = await (_channel.invokeMethod('getDevices'));
+    return list.map((map) => BluetoothDevice.fromJson(map)).toList();
+  }
+
+
   Future startScan({
     Duration? timeout,
   }) async {
